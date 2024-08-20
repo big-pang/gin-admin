@@ -32,7 +32,7 @@ gin-admin目录下 go mod tidy 将自动下载依赖包
 #### 运行系统
 ``` go
 //在项目下运行，开始进行调试开发
-bee run
+go run main.go
 ```
 
 #### 访问后台
