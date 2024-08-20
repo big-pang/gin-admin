@@ -1,0 +1,16 @@
+gin-admin.*exe*
+gin-admin
+gin-admin
+static/uploads/*
+.idea/*
+main.exe
+main
+vendor/*
+go.sum
+lastupdate.tmp
+config.yaml
+logs/*
+
+__debug_bin*
+
+qqzeng-ip-utf8.dat

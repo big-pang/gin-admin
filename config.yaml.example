@@ -1,0 +1,49 @@
+base:
+  name: "gin-admin"
+  version: "1.0.0"
+  Addr: ""
+  port: 8888
+  debug: true
+  mode: "dev" # dev/release
+  log_aes_key: "AES256Key-32Characters1234567890"
+
+
+system:
+  env: public
+  db-type: mysql
+  oss-type: local
+  use-multipoint: false
+  use-redis: false
+  iplimit-count: 15000
+  iplimit-time: 3600
+
+# redis configuration
+redis:
+  db: 0
+  addr: '127.0.0.1:6379'
+  password: ''
+
+# mysql connect configuration
+mysql:
+  path: '127.0.0.1'
+  port: 3306
+  db-name: 'gin-admin'
+  username: 'root'
+  password: 'root'
+  config: ""
+  max-idle-conns: 10
+  max-open-conns: 100
+  log-mode: ""
+  log-zap: false
+
+login:
+  token: "some-token"
+  captcha: "1"
+  background: "/static/admin/images/login-default-bg.jp"
+# attachment configuration
+attachment:
+  thumb_path: '/static/attachment/thumbnail/'
+  path: 'static/uploads/attachment/'
+  url: 'static/uploads/attachment/'
+  validate_size: 52428800
+  validate_ext: 'bmp,ico,psd,jpg,jpeg,png,gif,doc,docx,xls,xlsx,pdf,zip,rar,7z,tz,mp3,mp4,mov,swf,flv,avi,mpg,ogg,wav,flac,ape'
