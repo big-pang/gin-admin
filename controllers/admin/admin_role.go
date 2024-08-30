@@ -262,14 +262,14 @@ func (arc *AdminRole) Access(c *gin.Context) {
 		if menuMap[id] == nil {
 			menuMap[id] = make(models.Params)
 		}
-		menuMap[id]["Id"] = id
-		menuMap[id]["ParentId"] = adminMenu.ParentId
-		menuMap[id]["Name"] = adminMenu.Name
-		menuMap[id]["Url"] = adminMenu.Url
-		menuMap[id]["Icon"] = adminMenu.Icon
-		menuMap[id]["IsShow"] = adminMenu.IsShow
-		menuMap[id]["SortId"] = adminMenu.SortId
-		menuMap[id]["LogMethod"] = adminMenu.LogMethod
+		menuMap[id]["id"] = id
+		menuMap[id]["parent_id"] = adminMenu.ParentId
+		menuMap[id]["name"] = adminMenu.Name
+		menuMap[id]["url"] = adminMenu.Url
+		menuMap[id]["icon"] = adminMenu.Icon
+		menuMap[id]["is_show"] = adminMenu.IsShow
+		menuMap[id]["sort_id"] = adminMenu.SortId
+		menuMap[id]["log_method"] = adminMenu.LogMethod
 	}
 
 	html := adminTreeService.AuthorizeHtml(menuMap, strings.Split(data.Url, ","))
